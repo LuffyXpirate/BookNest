@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Borrowings Management</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <section class="shadow-md p-4">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 container ml-4">
+        <p class="text-black flex items-center gap-2 hover:bg-gray-200 p-2 rounded-xl">
+          <i class="fa-solid fa-arrow-left text-xl"></i>
+          Back to Dashboard
+        </p>
+        <h2 class="text-2xl text-black font-bold">
+          <i class="fa-solid fa-calendar text-blue-400"></i>
+          Borrowings Management
+        </h2>
+      </div>
+    </section>
+
+    <!-- Dashboard Cards Section -->
+    <section class="bg-gray-50 w-full p-6">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div class="bg-white p-4 shadow rounded flex justify-between items-center">
+            <div>
+              <p class="text-gray-500 font-bold">Total Books</p>
+              <h3 class="text-2xl font-bold text-gray-800">338</h3>
+            </div>
+            <div class="text-blue-500 text-3xl">
+              <i class="fa-sharp fa-solid fa-book-open"></i>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white p-4 shadow rounded flex justify-between items-center">
+            <div>
+              <p class="text-gray-500 font-bold">Currently Borrowed</p>
+              <h3 class="text-2xl font-bold text-gray-800">58</h3>
+            </div>
+            <div class="text-green-500 text-3xl">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white p-4 shadow rounded flex justify-between items-center">
+            <div>
+              <p class="text-gray-500 font-bold">Due Soon</p>
+              <h3 class="text-2xl font-bold text-gray-800">40</h3>
+            </div>
+            <div class="text-yellow-500 text-3xl">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-white p-4 shadow rounded flex justify-between items-center">
+            <div>
+              <p class="text-gray-500 font-bold">Over Due</p>
+              <h3 class="text-2xl font-bold text-gray-800">40</h3>
+            </div>
+            <div class="text-purple-500 text-3xl">
+              <i class="fas fa-exclamation-circle"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Book Search Section -->
+    <section class="container mx-auto pt-10">
+      <div class="bg-white p-6 shadow-md rounded">
+        <!-- Heading -->
+        <div>
+          <h2 class="text-2xl font-bold text-black flex items-center gap-2">
+            <i class="fa-solid fa-magnifying-glass text-gray-700 text-lg"></i>
+            Search Books for Borrowing
+          </h2>
+          <p class="text-gray-500 mt-2">Search for books and process borrowing requests</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="mt-6">
+          <form action="#" class="flex flex-col md:flex-row gap-3">
+            <input
+              type="text"
+              placeholder="Search Books By Title, Author, ISBN..."
+              class="border border-gray-300 rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-black"
+            />
+            <button
+              type="submit"
+              class="bg-black text-white rounded-md px-6 py-3 flex items-center gap-2 hover:bg-gray-800 transition"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>Search</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Filters -->
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <!-- Filter Dropdowns -->
+          <select class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-gray-400 hover:border-black">
+            <option disabled selected>Class</option>
+            <option>All Classes</option>
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+            <option>4th Year</option>
+          </select>
+          <select class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-gray-400 hover:border-black">
+            <option disabled selected>Section</option>
+            <option>Section A</option>
+            <option>Section B</option>
+            <option>Section C</option>
+          </select>
+          <select class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-gray-400 hover:border-black">
+            <option disabled selected>Faculty</option>
+            <option>BCA</option>
+            <option>BBS</option>
+            <option>BSc CSIT</option>
+            <option>BIT</option>
+          </select>
+          <select class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-gray-400 hover:border-black">
+            <option disabled selected>Status</option>
+            <option>Active</option>
+            <option>Inactive</option>
+          </select>
+          <!-- Clear Button -->
+          <a
+            href="#"
+            class="w-full bg-white text-black rounded-md px-4 py-2 inline-flex items-center justify-center gap-2 hover:bg-gray-100 border border-gray-400 shadow-sm transition"
+          >
+            <i class="fa-solid fa-filter"></i>
+            <span>Clear</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student Borrowings Table Section -->
+    <section class="container mx-auto pt-10">
+      <div class="bg-white p-6 shadow-md rounded">
+        <!-- Heading -->
+        <h2 class="text-2xl font-bold text-black flex items-center gap-2">
+          <i class="fa-solid fa-magnifying-glass text-gray-700 text-lg"></i>
+          Manage Student Borrowings
+        </h2>
+        <p class="text-gray-500 mt-2">
+          View and manage all student borrowings with expandable details
+        </p>
+
+        <!-- Borrowings Table -->
+        <table class="w-full mt-6 border border-gray-200 text-sm text-gray-700">
+          <thead class="bg-gray-100 text-left">
+            <tr>
+              <th class="px-4 py-2">Details</th>
+              <th class="px-4 py-2">Student</th>
+              <th class="px-4 py-2">Book</th>
+              <th class="px-4 py-2">Dates</th>
+              <th class="px-4 py-2">Status</th>
+              <th class="px-4 py-2 text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Borrowed Book Row -->
+            <tr class="border-t border-gray-200">
+              <td class="px-4 py-3">
+                <button onclick="toggleDetails(this)" class="text-lg">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </td>
+              <td class="px-4 py-3">
+                <p class="font-semibold">Ramesh Karki</p>
+                <p class="text-xs text-gray-400">ID: ST123</p>
+              </td>
+              <td class="px-4 py-3">
+                <p class="font-semibold">Database Systems</p>
+                <p class="text-xs text-gray-500">by C.J. Date</p>
+              </td>
+              <td class="px-4 py-3">
+                <p>Borrowed: <span class="text-gray-500">2025-07-01</span></p>
+                <p>Due: <span class="text-red-500">2025-07-10</span></p>
+              </td>
+              <td class="px-4 py-3">
+                <span class="text-white bg-red-500 px-2 py-1 rounded text-xs">Overdue</span>
+              </td>
+              <td class="px-4 py-3 text-center">
+                <div class="flex justify-center gap-3">
+                  <button title="View" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <a href="#" title="Return" class="bg-black text-white px-3 py-1 rounded hover:bg-gray-800 text-sm">
+                    <i class="fas fa-undo-alt"></i> Return
+                  </a>
+                  <button title="Delete" class="text-red-600 hover:text-red-800">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Hidden Borrowing Details Row -->
+            <tr class="hidden-row hidden bg-gray-50">
+              <td colspan="6" class="px-6 py-4 text-sm text-gray-600">
+                <div class="flex flex-wrap gap-6">
+                  <div><strong>Author:</strong><p class="text-gray-700">C.J. Date</p></div>
+                  <div><strong>Shelf Number:</strong><p class="text-gray-700">A3</p></div>
+                  <div><strong>Class:</strong><p class="text-gray-700">12</p></div>
+                  <div><strong>Faculty:</strong><p class="text-gray-700">Science</p></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Toggle Row JS -->
+      <script>
+        function toggleDetails(button) {
+          const row = button.closest("tr").nextElementSibling;
+          row.classList.toggle("hidden");
+          const icon = button.querySelector("i");
+          icon.classList.toggle("fa-chevron-down");
+          icon.classList.toggle("fa-chevron-up");
+        }
+      </script>
+    </section>
+  </body>
+</html>

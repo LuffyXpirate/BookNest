@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Students</title>
+
+  <!--Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!--Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Header part -->
+  <section class="shadow-md p-4">
+    <div class="flex items-center gap-6 container ml-14">
+      <p class="text-black flex items-center gap-2 hover:bg-gray-200 p-2 rounded-xl">
+        <i class="fa-solid fa-arrow-left text-xl"></i>
+        Back to Dashboard
+      </p>
+      <h2 class="text-2xl text-black font-bold">
+        <i class="fas fa-users"></i>
+
+        </i> Manage Students
+      </h2>
+    </div>
+  </section>
+
+
+  <!-- Next part -->
+  <section class="bg-gray-50 w-full p-6">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1: Total Students -->
+        <div class="bg-white p-4 shadow rounded flex justify-between items-center">
+          <div>
+            <p class="text-gray-500">Total Students</p>
+            <h3 class="text-2xl font-bold text-gray-800">338</h3>
+          </div>
+          <div class="text-blue-500 text-3xl">
+            <i class="fas fa-users"></i>
+          </div>
+        </div>
+
+        <!-- Card 2: Active Students -->
+        <div class="bg-white p-4 shadow rounded flex justify-between items-center">
+          <div>
+            <p class="text-gray-500">Active Students</p>
+            <h3 class="text-2xl font-bold text-gray-800">58</h3>
+          </div>
+          <div class="text-green-500 text-3xl">
+            <i class="fas fa-user-plus"></i>
+          </div>
+        </div>
+
+        <!-- Card 3: With Borrowed Books -->
+        <div class="bg-white p-4 shadow rounded flex justify-between items-center">
+          <div>
+            <p class="text-gray-500">With Borrowed Books</p>
+            <h3 class="text-2xl font-bold text-gray-800">40</h3>
+          </div>
+          <div class="text-yellow-500 text-3xl">
+            <i class="fas fa-book"></i>
+          </div>
+        </div>
+
+        <!-- Card 4: Faculties -->
+        <div class="bg-white p-4 shadow rounded flex justify-between items-center">
+          <div>
+            <p class="text-gray-500">Faculties</p>
+            <h3 class="text-2xl font-bold text-gray-800">40</h3>
+          </div>
+          <div class="text-purple-500 text-3xl">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Search & Filter Students -->
+    <section class="container mx-auto pt-10">
+      <div class="bg-white p-6 shadow-md rounded">
+
+        <!-- Section Heading -->
+        <div>
+          <h2 class="text-2xl font-bold text-black flex items-center gap-2">
+            <i class="fa-solid fa-magnifying-glass text-gray-700 text-lg"></i>
+            Search & Filter Students
+          </h2>
+        </div>
+
+        <!-- Search Input + Button -->
+        <div class="mt-6">
+          <form action="#" class="flex flex-col md:flex-row gap-3 items-stretch md:items-center">
+            <input type="text" placeholder="Search students by name, ID, email..."
+              class="border border-gray-300 rounded-md p-3 w-full md:w-5/6 focus:outline-none focus:ring-2 focus:ring-black" />
+            <button type="submit"
+              class="bg-black text-white rounded-md px-6 py-3 flex items-center justify-center gap-2 hover:bg-gray-800 transition">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>Search</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Filter Dropdowns -->
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+
+          <!-- Class Dropdown -->
+          <div>
+            <select name="class" id="class"
+              class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-gray-400 hover:border-black">
+              <option value="" disabled selected>Select Class</option>
+              <option value="all">All Classes</option>
+              <option value="1st">1st Year</option>
+              <option value="2nd">2nd Year</option>
+              <option value="3rd">3rd Year</option>
+              <option value="4th">4th Year</option>
+            </select>
+          </div>
+
+          <!-- Section Dropdown -->
+          <div>
+            <select name="section" id="section"
+              class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-gray-400 hover:border-black">
+              <option value="" disabled selected>Select Section</option>
+              <option value="a">Section A</option>
+              <option value="b">Section B</option>
+              <option value="c">Section C</option>
+            </select>
+          </div>
+
+          <!-- Faculty Dropdown -->
+          <div>
+            <select name="faculty" id="faculty"
+              class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-gray-400 hover:border-black">
+              <option value="" disabled selected>Select Faculty</option>
+              <option value="bca">BCA</option>
+              <option value="bbs">BBS</option>
+              <option value="csit">BSc CSIT</option>
+              <option value="bit">BIT</option>
+            </select>
+          </div>
+
+          <!-- Status Dropdown -->
+          <div>
+            <select name="status" id="status"
+              class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-gray-400 hover:border-black">
+              <option value="" disabled selected>Select Status</option>
+              <option value="active">Active</option>
+              <option value="inactive">Inactive</option>
+            </select>
+          </div>
+
+          <!-- Clear Button -->
+          <div class="flex items-end">
+            <a href="#"
+              class="w-full bg-black text-white rounded-md px-4 py-2 inline-flex items-center justify-center gap-2 hover:bg-gray-800 transition">
+              <i class="fa-solid fa-filter"></i>
+              <span>Clear</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="pt-10 shadow-lg p-4 container mx-auto">
+        <div>
+          <h2 class="text-2xl font-bold">All Students</h2>
+          <p class="text-gray-500 mt-3">Manage student records and library access</p>
+        </div>
+
+      <div class="p-4">
+  <div class="overflow-x-auto">
+    <table class="w-full mt-6 text-sm border border-gray-200 rounded-md">
+      <thead class="bg-gray-100">
+        <tr class="text-center">
+          <th class="p-3 font-semibold border-b">Student Details</th>
+          <th class="p-3 font-semibold border-b">Contacts</th>
+          <th class="p-3 font-semibold border-b">Academic</th>
+          <th class="p-3 font-semibold border-b">Parent</th>
+          <th class="p-3 font-semibold border-b">Books</th>
+          <th class="p-3 font-semibold border-b">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="text-center text-gray-700">
+        <tr class="border-b hover:bg-gray-50">
+          <td class="p-3">John</td>
+          <td class="p-3">john@gmail.com</td>
+          <td class="p-3">2nd Year - BCA</td>
+          <td class="p-3">Mr. Smith</td>
+          <td class="p-3">3 Borrowed</td>
+          <td class="p-3 flex items-center justify-center gap-4">
+            <a href="#" class="text-blue-500 hover:text-blue-700" title="View">
+              <i class="fa-solid fa-eye"></i>
+            </a>
+            <a href="#" class="text-green-500 hover:text-green-700" title="Edit">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    </section>
+
+</body>
+
+</html>
